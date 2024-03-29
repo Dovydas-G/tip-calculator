@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>TIP Calculator</title>
+  </head>
+  <body>
+    <section class="main">
+      <div class="container">
+        <h1 class="title">TIP Calculator</h1>
+        <form action="" class="tip-box">
+          <div class="billBox">
+            <label class="labelBill text-size" for="">Bill:</label>
+            <input
+              id="bill-input"
+              type="text"
+              class="input-text inputScreen"
+              placeholder="eu"
+            />
+          </div>
+          <div class="rateBox">
+            <label class="labelRate text-size" for="">Rate:</label>
+            <div class="tipRate">
+              <select class="dropDown input-text inputScreen" id="rate-input">
+                <option>-- Select an option --</option>
+                <option id="poor">5% - Poor</option>
+                <option id="good">10% - Good</option>
+                <option id="exelent">15% - Exelent</option>
+              </select>
+            </div>
+          </div>
+        </form>
+        <button class="check-btn btn">Calculate</button>
+        <div class="resultBox">
+          <p class="results text-size">Tip:</p>
+          <p id="resultTip" class="text-size input-text inputScreen"></p>
+        </div>
+        <div class="resultBox">
+          <p class="results text-size">Result:</p>
+          <p id="result" class="text-size input-text inputScreen"></p>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
