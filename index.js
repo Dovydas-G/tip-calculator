@@ -19,6 +19,11 @@ checkBtnDOM.addEventListener('click', function () {
     
     const rateNum = +str;
     const billNum = +bill;
+
+    if (billNum === 0 || isNaN(billNum)) {
+        billNum = 0;
+    }
+
     const tip = (rateNum * billNum) / 100;
     const result = billNum + tip;
 
