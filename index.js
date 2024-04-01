@@ -9,7 +9,7 @@ const rateInputDOM = document.getElementById('rate-input');
 checkBtnDOM.addEventListener('click', function () {
     const bill = billInputDOM.value;
     const rate = rateInputDOM.value;
-    console.log(bill, rate);
+
     let str = "";
     for (let i = 0; i < rate.length; i++) {
         if(rate[i] >= "0" && rate[i] <= "9") {
@@ -17,13 +17,14 @@ checkBtnDOM.addEventListener('click', function () {
         }
     }
     
-    const rateNum = +str
-    const billNum = +bill
+    const rateNum = +str;
+    const billNum = +bill;
     const tip = (rateNum * billNum) / 100;
     const result = billNum + tip;
 
-    resultsTipDisplayDOM.innerHTML = `${tip}`;
-    resultsDisplayDOM.innerHTML = `${result}`;
+
+    resultsTipDisplayDOM.innerHTML = `${tip}€`;
+    resultsDisplayDOM.innerHTML = `${result}€`;
 
  
 });
